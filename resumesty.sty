@@ -1,0 +1,87 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% resumesty.sty
+%
+% \documentstyle{resume}
+%
+% Copyright (c) 2010 by Olli Vanhoja
+% Permission to copy all or part of this work is granted, provided
+% that the copies are not made or distributed for resale, and that
+% the copyright notice and this notice are retained.
+%
+% THIS WORK IS PROVIDED ON AN "AS IS" BASIS.  THE AUTHOR PROVIDES NO
+% WARRANTY WHATSOEVER, EITHER EXPRESS OR IMPLIED, REGARDING THE WORK,
+% INCLUDING WARRANTIES WITH RESPECT TO ITS MERCHANTABILITY OR FITNESS
+% FOR ANY PARTICULAR PURPOSE.
+%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{resumesty}[2010/11/16 Version 1.0]
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{datetime}
+\usepackage{fancyhdr}
+
+\renewcommand{\headrulewidth}{0pt}     % ylätunnisteen viiva
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt}       % tilaa vaakaviivalle
+\fancypagestyle{plain}{%
+   %\fancyhead{}                       % perussivuille ei tule tunnisteita
+   %\renewcommand{\headrulewidth}{0pt} % eikä viivaa
+}
+
+%%%%%% Interface commands: parameters specified by user (+ necessary variables)
+%
+\newcommand*{\vFullname}{}% variable
+\newcommand*{\fullname}{}
+\renewcommand*{\fullname}[1]{\renewcommand*{\vFullname}{#1}}% User command
+
+\newcommand*{\vEmail}{}% variable
+\newcommand*{\email}{}
+\renewcommand*{\email}[1]{\renewcommand*{\vEmail}{#1}}% User command
+
+\newcommand*{\vPhone}{}% variable
+\newcommand*{\phone}{}
+\renewcommand*{\phone}[1]{\renewcommand*{\vPhone}{#1}}% User command
+
+\newcommand*{\vAddressA}{}% variable
+\newcommand*{\addressA}{}
+\renewcommand*{\addressA}[1]{\renewcommand*{\vAddressA}{#1}}% User command
+
+\newcommand*{\vAddressB}{}% variable
+\newcommand*{\addressB}{}
+\renewcommand*{\addressB}[1]{\renewcommand*{\vAddressB}{#1}}% User command
+
+\newcommand*{\vWWW}{}% variable
+\newcommand*{\WWW}{}
+\renewcommand*{\WWW}[1]{\renewcommand*{\vWWW}{#1}}% User command
+
+%____________________________________________________________________________________
+% Contact Information
+\newcommand*{\createContactInformation}{
+    \section{\mysidestyle Contact}\vspace{2mm}
+
+    \begin{tabular*}{1.0\textwidth}%
+    	{@{\extracolsep{\fill}}lr}
+    	\vAddressA & \vPhone \\
+    	\vAddressB & \vEmail \\
+    	           & \vWWW   \\
+    \end{tabular*}
+}
+
+\newcommand*{\addEducation}[7]{
+   {\textsc{#1}}, #2 \vspace{2mm}\\\vspace{1mm}%
+	{\sl #3} \hfill {\bf #4}\\%
+        {\sl #5} \hfill {\bf #6}\vspace{2mm}\\%
+        {\sc #7}\\%
+}
+
+\newcommand*{\addExperience}[4]{
+	{\bf #1}, #2 \vspace{2mm}\\\vspace{1mm}%
+	{\sl #3} \hfill {\bf #4}\\
+}
+
+\newcommand*{\addAssociation}[2]{
+	{\bf #1}, #2 \vspace{2mm}\\\vspace{1mm}
+}
+\newcommand*{\addPosition}[2]{
+	{\sl #1} \hfill {\bf #2}\\
+}
