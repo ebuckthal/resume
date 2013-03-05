@@ -1,114 +1,103 @@
-\documentclass[margin,line]{res}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resume template
+%
+\documentclass[margin,line,oneside,a4paper]{resume}
+\usepackage[english]{babel}
+\usepackage{resumesty}
 
-\oddsidemargin -.5in
-\evensidemargin -.5in
-\textwidth=6.0in
-\itemsep=0in
-  \parsep=0in
-% if using pdflatex:
-\setlength{\pdfpagewidth}{\paperwidth}
-\setlength{\pdfpageheight}{\paperheight}
+%____________________________________________________________________________________
+% COMMENT THESE OUT IF ONLY ONE PAGE IS USED
+%\pagestyle{fancy}
+%\fancyhf{} % poista ylä- ja alatunnisteen nykyiset asetukset
+%\fancyhead[LE,RO]{}
+%\fancyhead[L]{%
+%\begin{flushright}
+%  \vskip -5ex
+%  {\renewcommand{\dateseparator}{.}\ddmmyyyydate\today}\hspace*{2ex}
+%  \bfseries\thepage{} (2) %% Remember!!!
+%\end{flushright}
+%}
+% COMMENT THESE OUT IF ONLY ONE PAGE IS USED
+%____________________________________________________________________________________
 
-  \newenvironment{list1}{
-    \begin{list}{\ding{113}}{%
-      \setlength{\itemsep}{0in}
-        \setlength{\parsep}{0in} \setlength{\parskip}{0in}
-        \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
-    \setlength{\leftmargin}{0.17in}}}{\end{list}}
-    \newenvironment{list2}{
-      \begin{list}{$\bullet$}{%
-        \setlength{\itemsep}{0in}
-          \setlength{\parsep}{0in} \setlength{\parskip}{0in}
-          \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
-      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+\name{\Large Eric Buckthal}
+%\fullname{Timo Olli Veikko Vanhoja}
+\email{ebucktha@calpoly.edu}
+\phone{(208)841-0115}
+\addressA{390 Islay Street}
+\addressB{San Luis Obispo, California 93401}
+%\WWW{http://hit.edu/hbp}
 
-
-      \begin{document}
-
-      \name{{\bf Eric Buckthal} \vspace*{.1in}}
-
-      \begin{resume}
-        \section{\sc Contact Information}
-        \vspace{.05in}
-        \begin{tabular}{@{}p{2in}p{4in}}
-          390 Islay Street           & (208) 841-0115\\
-          San Luis Obispo, CA 93401  & {\tt ebucktha@calpoly.edu} \\
-        \end{tabular}
-
-        \section{\sc Education}
-        {\bf California Polytechnic State University}, San Luis Obispo, California\\
-        \vspace*{-.1in}
-        \begin{list1}
-        \item[] Master of Science {\bf Computer Science}, expected June 2013
-%\begin{list2}
-%\vspace*{.05in}
-%\item Dissertation Topic:  ``Nonstationary Covariance Models for
-%  Spatial Data and Regression Problems''
-%\item Dissertation Topic:  ``Hierarchical Models for Multiple Ratings
-%  in Performance-Based\\ \hspace*{1.23in} Student Assessments.''
-%\item Advisor:  Mark J. Schervish
-%\end{list2}
-          \vspace*{.05in}
-        \item[] Bachelor of Science {\bf Computer Engineering}, expected June 2013
-        \end{list1}
-
-        \section{\sc Technical Projects}
-        {\bf Robotic Arm Pendant Controller} \hfill {\em September 2011 - March 2012}\\
-        \begin{list2}
-        \item Team-oriented sponsored project (Strasbaugh, San Luis Obispo) to redesign dated user interface pendant for laptop support while overhauling automation and servo control. 
-        \item Re-engineered Staubli robotic arm to interface with {\sc EtherCAT} automation protocol. Server implementation managed a networked controlling client and communicated via {\sc TwinCAT} Suite with Staubli robot.
-        \end{list2}
-
-        {\bf Sliding Window Remote File Duplication} \hfill {\em December 2011}\\
-        C implementation of packet delivery from server to client over local network, including ability to manage multiple clients with pthreading. The project highlighted transport level selective rejection ARQ to handle induced packet loss and corruption.
-        \vspace*{.05in}
-
-        {\bf Real-time Network Distribution of Graphical Data} \hfill {\em March 2012}\\
-        Cost-performance analysis of the distribution of real-time graphical data across multiple physics engines, rendering on a central client. My team experimented with the capabilities of TCP, intending to off-load expensive physics calculations to a remote server while maintaining a responsive host. The overhead associated with networked data demonstrated low scalability.
-        \vspace*{.05in}
-
-        {\bf Algorithm Analysis} \hfill {\em January 2012 - March 2012}\\
-        Investigated algorithmic complexity by designing solutions to practical problems with dynamic programming, branch-and-bound, divide-and-conquer, linear programming, and greedy approaches. Projects reinforced Java, object-oriented programming, and tests-before-design technique.
-        \vspace*{.05in}
-
-        \section{\sc Professional Experience}
-        {\bf Cygnet Software}, San Luis Obispo, California
-
-        \vspace{-.3cm}
-        {\bf Software Developer Internship} \hfill {\em June 2011 - September 2011}\\
-        Designed and implemented unit-testing applications and projects graphing certain data for SCADA Suite. Majority of the work done in partners within a larger group of interns; we engineered C++ MFC applications, with various work in Visual Basic.
-
-        {\bf Computer Networks Laboratory}, California Polytechnic State University
-
-        \vspace{-.3cm}
-        {\em Teaching Assistant} \hfill {\em January 2012 - Present}\\
-
-        \section{\sc Leadership and Involvement}
-        \begin{list1}
-        \item[] {\bf Tau Beta Pi}, California Mu Chapter \hfill {\em Active Member}
-        \item[] {\bf Eta Kappa Nu}, Epsilon Phi Chapter \hfill {\em Active Member}
-        \item[] {\bf KCPR} Cal Poly Radio Station
-          \begin{list2}
-          \item[] Program Director \hfill {\em April 2011 - April 2012}
-          \item[] Music Director \hfill {\em April 2012 - Present}
-          \end{list2}
-        \end{list1}
-
-%\section{\sc Computer Skills}
-%\begin{list2}
-%\item Statistical Packages:  R, S-Plus, BUGS; some experience
-%  with SAS; extensive use of C and Fortran statistical libraries.
-%\item Languages:  C++, Perl, Pascal, some use of Unix shell scripts,
-%  MPI parallel processing library.
-%\item Applications: Generic Mapping Tools (GMT) - Unix mapping software, \LaTeX, common %Windows
-%  database, spreadsheet, and presentation software
-%\item Algorithms: Experience programming Markov Chain Monte Carlo
-%  simulations of Bayesian posterior distributions
-%\item Operating Systems:  Unix/Linux, Windows.\\
-%\end{list2}
-
-      \end{resume}
-      \end{document}
+\begin{document}
+\begin{resume}
 
 
+   \createContactInformation
+
+
+   %____________________________________________________________________________________
+   % Education
+   \section{\mysidestyle Education}
+
+   \addEducation{\textsc{California Polytechnic State University}}{San Luis Obispo, California}%
+   {Bachelor of Science, \textbf{Computer Engineering}}{Expected June 2014}%
+   {Master of Science, \textbf{Computer Science}}{Expected June 2014}{GPA 3.4}
+
+   %____________________________________________________________________________________
+   % Professional Experience
+   \section{\mysidestyle Experience}
+
+   \addExperience{CygNet Software}{San Luis Obispo, California}%
+   {Software Development Internship}{Summer 2012 and Summer 2011}
+   \begin{list2}
+   \item Developed in Windows MFC (Visual C++) application environment with Visual Studio and Microsoft Source Safe.
+   \item Emphasized user-interaction and interface design -- worked with clients to understand workflow and product use.
+   \item Designed, documented, and created automatic tests for exposed API as well as internal support applications.   
+   \item Responsible developer in agile scrum team.
+   \item Incorporated Microsoft COM and ProEssentials (third-party) technologies.
+   \end{list2}
+
+   \addExperience{Computer Network Laboratory}{San Luis Obispo, California}%
+   {Teaching Assistant}{January 2012 -- Present}
+   \begin{list2}
+   \item Maintained lab equipment and assist students during assignments.
+   \item Lab material consisted of switch and router behaviors: ARP, IP and subnets, static and dynamic routing, RIP, and VLANs.
+   \item Automated scripted grading utilities.
+   \end{list2}
+
+   %____________________________________________________________________________________
+   % Computer Skills
+   \section{\mysidestyle Skills}
+
+   \begin{list2}
+   \item \textsc{Unix}, Natural Language Processing, Microsoft MFC, Microsoft COM, Visual Studio and Microsoft Source Safe, node.js
+   \item C, C++, SQL, Python, Java, JavaScript, HTML, CSS, Visual Basic
+   \end{list2}
+
+   %____________________________________________________________________________________
+   % Interests
+   \section{\mysidestyle Interests}
+
+   \begin{list2}
+   \item Human-Computer Interaction, Application Design, Software Development, Usability, Interface Design, Web Design
+   \end{list2}
+
+   %____________________________________________________________________________________
+   % Leadership and Involvement
+   \section{\mysidestyle Leadership}
+
+   \addAssociation{KCPR 91.3FM, Cal Poly Radio}{San Luis Obispo, California}
+   \addPosition{Music Director}{April 2012 -- Present}\vspace{-4mm}\\\vspace{1mm}
+   \addPosition{ Program Director}{April 2011 -- April 2012}
+   \addAssociation{Tau Beta Pi}{Engineering Honor Society}
+   \addPosition{Active Member}{December 2011 -- Present}
+   \addAssociation{Eta Kappa Nu}{Computer Engineering Honor Society}
+   \addPosition{Active Member}{December 2010 -- Present}
+
+   %________________________________________________________________________________________
+\end{resume}
+\end{document}
+
+%________________________________________________________________________________________
+% EOF
 
